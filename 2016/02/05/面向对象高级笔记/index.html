@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	 <link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			
+    <title>
+    个人技术博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">过客丶肖</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/技术/">技术</a></li><li><a class="category-link" href="/categories/爱好/">爱好</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2017/04/">April 2017</a></li><li><a class="archive-link" href="/archives/2017/03/">March 2017</a></li><li><a class="archive-link" href="/archives/2016/02/">February 2016</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/xiaosineng?tab=repositories" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://img.hb.aicdn.com/199ff0faded80e74bcc10dca9fe43c86a9f21efed1f0-CWR2DY_fw658);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >面向对象高级学习笔记与总结</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="js面向对象与高级"><a href="#js面向对象与高级" class="headerlink" title="js面向对象与高级"></a>js面向对象与高级</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h4 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h4><ul>
+<li>任何事物都可以看作是对象。</li>
+<li>面向对象与面向过程的概念</li>
+</ul>
+<h4 id="面向过程"><a href="#面向过程" class="headerlink" title="面向过程"></a>面向过程</h4><ul>
+<li><p>凡是自己亲力亲为，自己按部就班的解决现有问题。</p>
+</li>
+<li><p>面向对象</p>
+</li>
+<li><p>自己充当一个指挥者的角色，指挥更加专业的对象帮我解决问题。</p>
+</li>
+<li><p>联系</p>
+</li>
+<li><p>面向对象仍然离不开面向过程，可以认为它是对面向过程更高一层的封装。</p>
+<h4 id="创建对象的方式"><a href="#创建对象的方式" class="headerlink" title="创建对象的方式"></a>创建对象的方式</h4></li>
+</ul>
+<h4 id="字面量形式"><a href="#字面量形式" class="headerlink" title="字面量形式"></a>字面量形式</h4><p>var p = {};<br>p.name = ‘中国人’;<br>p.age = ‘500’;<br>构造函数形式 ==&gt; 复用性更强</p>
+<p>function Person(name, age) {<br>    this.name = name;<br>    this.age = age;<br>}<br>var p = new Person(‘中国人’, 500);<br>var p2 = new Person(‘中国人2’, 500);</p>
+<h4 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h4><p>概念</p>
+<p>如果一个函数配合new关键字创建对象，那么这个函数也叫构造函数<br>构造函数与普通函数本质上是一样的<br>编写构造函数时，首字母通常会大写，但不是必须的(类似变量驼峰命名法)<br>返回值特点</p>
+<p>如果构造函数没有return语句，那么new它，得到一个新实例<br>如果构造函数return了一些基本类型数据，那么new它，得到一个新实例<br>如果构造函数return了一个对象，那么new它，得到return的对象<br>类与实例的概念</p>
+<p>类</p>
+<p>类是对一些具有相同特征与特性事物的抽象描述<br>比如动物类的定义是比较抽象的，它抽取了动物与动物之间的相同特征。<br>同样植物类、哺乳动物类、人类的定义也都是比较抽象的，也是提取他们的共同特征而形成的定义，这就是类。<br>在js中，可以把构造函数看作是类<br>实例</p>
+<p>实实在在的具体事物就是某个类的实例。<br>比如我家的旺财，是狗类的实例<br>我的弟弟妹妹，是人类的实例<br>在js中，通过构造函数创建的对象就是实例<br>联系</p>
+<p>如果把类看作是模子，实例则是模子印出来的东西。<br>对象类型</p>
+<p>对象的类型就是其构造函数的名字<br>比如数组是Array类型的对象，日期是Date类型的对象<br>Array和Date就是其构造函数的名字<br>那么通过Person创建一个实例，那么这个实例就是Person类型的对象。<br>原型</p>
+<p>原型是一个对象，它的属性可以供其他对象共享<br>js中有很多原型对象，基本每个对象都有属于自己的原型<br>原型对象的存在可以大大的节省内存开销<br>原型的使用</p>
+<p>每个构造函数都有一个prototype属性，可以给其赋值<br>然后通过构造函数创建的实例就可以共享其属性与方法<br>面向对象与面向过程优缺点</p>
+<p>面向对象</p>
+<p>缺点<br>通常比面向过程消耗内存，因为有很多实例要存储<br>前期开发比较缓慢，但是复用性强，后期开发与维护进度会逐渐加快<br>优点<br>变量的管理比较清晰，可读性较高<br>因为代码与对象间的职责比较清晰，所以后期可维护性和可扩展性也比较高<br>复用性更强<br>面向过程</p>
+<p>缺点<br>变量混乱，可读性较差<br>通常有新需求出现，代码改动比较大，所以可维护性和可扩展性比较差<br>优点<br>开发迅速，只要能解决当前问题即可<br>面向对象3大特征</p>
+<p>封装性<br>对象可以把很多属性与方法集中在一起管理，就是js的封装性。<br>继承性<br>对象可以使用其原型对象的属性与方法，就是js的继承性。<br>多态性<br>js没有多态。如果非要说，那么对象形态、继承关系可以随时被改变，可以认为是js的多态性。<br>面向对象的书写过程</p>
+<p>根据需求提取解决该问题所需的对象<br>比如我要逛街，需要一个导购，需要一个保镖，需要一个女朋友<br>编写每一个对象所对应的构造函数<br>构造函数可以重复性创建实例，因为我可能需要多个保镖<br>function Person() {}<br>抽取对象所需的属性<br>就是该对象应该拥有的特征，比如人有名称、年龄、性别、四肢、双眼。<br>function Person(name) { this.name = name; }<br>抽取对象所需的方法<br>就是该对象应该拥有的特性，比如人会学习创造，狗会看门逗你笑<br>Person.prototype.study = function(){};<br>根据写好的构造函数创建实例，调用属性方法解决实际需求<br>就是调度实例干事<br>var p = new Person(); p.study();<br>原型其他</p>
+<p>谁有prototype与proto</p>
+<p>每个函数都有prototype属性<br>每个对象都有proto属性<br>函数比较特殊，即是函数又是对象，所以prototype与proto都有<br>prototype与proto联系</p>
+<p>通过构造函数创建的实例<br>当前构造函数的prototype属性指向谁，实例的proto属性就指向谁<br>如何得到一个对象继承的原型</p>
+<p>通过proto属性（但是它是非标准属性，不建议开发中使用）<br>通过constructor属性得到对象的构造函数，再访问其prototype得到原型<br>创建对象时内在的4个步骤</p>
+<p>创建一个新实例(本质上就是开辟了一块内存空间)<br>设置新对象的原型<br>给新实例设置proto属性值<br>这个值与构造函数的prototype属性有关<br>赋值过程相当于这样：新实例.proto = 构造函数.prototype<br>执行构造函数，执行时设置其this指向新实例<br>返回新实例的地址<br>对象的属性访问规则</p>
+<p>优先从自身查找<br>找不到就去原型找<br>还找不到继续去原型的原型找<br>直到终点，终点也没有返回undefined<br>对象的属性赋值</p>
+<p>给一个对象的属性赋值<br>如果之前没有该属性那么就是新增，有就是修改<br>对象的属性赋值只影响自己，不会对其他对象和原型对象造成影响</p>
+<h1 id="原型常见书写方式"><a href="#原型常见书写方式" class="headerlink" title="原型常见书写方式"></a>原型常见书写方式</h1><p>1、默认原型</p>
+<p>function P() {}<br>P.prototype.fun = function(){};<br>var p = new P();<br>2、置换原型</p>
+<p>function P() {}<br>P.prototype = {<br>    constructor: P,<br>    fun: function(){}<br>};<br>var p = new P();<br>3、extend复制扩展</p>
+<p>function P() {}<br>extend(P.prototype, {}, {<br>    fun: function(){}<br>}, {<br>    fun2: function(){}<br>});<br>var p = new P();<br>4、Object.create</p>
+<p>var proObj = {<br>    fun: function(){}<br>};<br>var p = Object.create(proObj);<br>实现属性复制函数封装</p>
+<p>function extend() {<br>    var target = arguments[0];<br>    for(var i = 1, len = arguments.length; i &lt; len; i++) {<br>        for(var key in arguments[i]) {<br>            target[key] = arguments[i][key];<br>        }<br>    }<br>    return target;<br>}<br>类成员与实例成员</p>
+<p>类成员(静态成员)<br>添加给类自己的属性与方法<br>实例成员<br>添加给实例自己的属性与方法<br>原型上供实例使用的属性与方法</p>
+<h1 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h1><p>概念</p>
+<p>一个对象继承的所有由proto属性串联在一起的对象，称为该对象的原型链。<br>对象原型链的研究方案</p>
+<p>先通过proto得到对象的原型<br>然后访问这个原型的constructor属性，确定该原型的身份<br>然后继续按照上诉两个步骤，往上研究原型，最终就得到了对象的原型链。<br>规律与常见对象原型链结构</p>
+<p>原型链的终点统一是Object.prototype<br>对象的原型和该对象的类型有关<br>比如Person的实例，原型是Person.prototype<br>比如Animal的实例，原型是Animal.prototype<br>[]的原型链结构<br>[] ==&gt; Array.prototype ==&gt; Object.prototype ==&gt; null<br>{}的原型链结构<br>{} ==&gt; Object.prototype ==&gt; null<br>/abc/的原型链结构<br>/abc/ ==&gt; RegExp.prototype ==&gt; Object.prototype ==&gt; null<br>Person的原型链结构<br>Person ==&gt; Function.prototype ==&gt; Object.prototype ==&gt; null<br>Function的原型链结构<br>Function ==&gt; Function.prototype ==&gt; Object.prototype ==&gt; null<br>Object的原型链结构<br>Object ==&gt; Function.prototype ==&gt; Object.prototype ==&gt; null<br>构造函数默认的prototype，它统一都继承Object.prototype<br>比如Person.prototype，原型是Object.prototype<br>比如Animal.prototype，原型是Object.prototype<br>通过这个规则，可以自由猜想出任意一个实例所有的原型<br>比如Book的实例，其原型结构为： Book实例 ==&gt; Book.protoype ==&gt; Object.prototype ==&gt; null<br>运算符与方法</p>
+<p>in – 运算符</p>
+<p>作用：判断能否使用某个属性（包含继承的属性）<br>语法：属性名 in 对象<br>返回值：boolean<br>hasOwnProperty – 方法</p>
+<p>作用：判断一个属性是不是自己的（不包含继承的属性）<br>语法：对象.hasOwnProperty(属性名)<br>返回值：boolean<br>关于for in遍历的补充</p>
+<p>for in可以遍历对象继承的属性，不过一些内置的属性是不可遍历的。<br>delete – 运算符</p>
+<p>作用：删除对象的属性<br>语法：delete 对象.属性名 || delete 对象[属性名]<br>返回值：boolean<br>instanceof – 运算符</p>
+<p>作用：判断一个对象的原型链中是否含有某个构造函数的prototype<br>语法：对象 instanceof 构造函数<br>返回值：boolean<br>Function – 内置构造函数</p>
+<p>作用：创建函数实例<br>语法：new Function(形参1，形参2，…，代码体)<br>返回值：新创建的函数实例<br>特点：能够把字符串当做js脚本执行<br>eval – 内置的全局函数</p>
+<p>作用：执行字符串代码<br>语法：eval(字符串代码)</p>
+<h1 id="函数四种调用模式"><a href="#函数四种调用模式" class="headerlink" title="函数四种调用模式"></a>函数四种调用模式</h1><p>谨记：函数调用时，内部的this的值和这个函数定义无关，和运行(调用)有关。</p>
+<p>1、函数调用模式 ==&gt; 函数名() || 自调</p>
+<p>这种方式调用，函数运行时内部的this指向全局对象window。</p>
+<p>2、方法调用模式 ==&gt; 对象.方法名() || 对象[‘方法名’] || 祖对象.父对象.子对象.方法名()</p>
+<p>这种方式调用，函数运行时内部的this指向宿主对象。 (dom中事件绑定的函数，就是这种调用方式，所以this指向对应的dom对象)</p>
+<p>3、构造函数调用模式 ==&gt; new 构造函数() || new 对象.构造函数()</p>
+<p>这种方式调用，函数运行时内部的this指向新创建的实例对象。</p>
+<p>4、上下文调用模式(间接调用模式)</p>
+<p>函数名.call(this, arg1, arg2);<br>函数名.apply(this, [arg1, arg2]); 这种方式调用，函数运行时内部的this指向call或apply传入的第一个参数； 如果没有传第一个参数，或者第一个参数为null、undefined，那么this统一指向window。</p>
+<h1 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h1><p>概念</p>
+<p>变量的有效范围。<br>全局变量</p>
+<p>在全局都有效的变量。<br>定义方式：函数外定义。<br>生命周期：从定义开始，到页面被卸载结束。<br>局部变量</p>
+<p>只在局部有效的变量。<br>定义方式：函数内定义。<br>生命周期：一般情况下，是从定义开始，到函数执行完毕结束。<br>函数作用域</p>
+<p>只有函数才可以产生新的作用域<br>只有函数可以限定变量的有效范围<br>块级作用域 ==&gt; js没有</p>
+<p>凡是代码块就可以产生新的作用域<br>凡是代码块就可以限定变量的有效范围<br>词法作用域(静态作用域)</p>
+<p>说的是变量的查找规则，特点是变量查找与函数定义有关，与调用无关<br>先在当前作用域查找<br>找不到就去定义该函数的作用域找<br>一直找到全局作用域为止，全局也没有则报错<br>作用域的产生</p>
+<p>函数可以被多次重复调用，调用一次就会产生一个新的作用域。<br>作用域链</p>
+<p>函数在定义的时候，将来它执行时的上级作用域就被确定好了，上级作用域可能还有上级，函数所有的上级作用域称之为作用域链。<br>一个函数作用域可以访问的所有上级作用域，称为它的作用域链。<br>垃圾回收机制原则</p>
+<p>一个对象没有被其他变量或者属性引用，那么就会被释放。<br>同时还要保证该对象能够被使用，对于那些无法使用，又存在循环引用的对象，也会被释放。<br>一个局部变量没有被其他函数引用，那么就会被释放。<br>注意：有一个容易搞混，又没有什么联系的知识点，这里强调一下</p>
+<p>函数内的this，与函数的定义无关，与调用有关。 <figure class="highlight javascript"><figcaption><span>var obj = &#123; fn: function() &#123; console.log(this) &#125;; &#125;; var fn = obj.fn;</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 同一个fn，三种调用方式，this分别不同 obj.fn(); // obj fn(); // window new fn(); // fn实例</span></div><div class="line"></div><div class="line">- 变量的查找，与函数的定义有关，与调用无关。</div><div class="line"><span class="string">``</span><span class="string">`javascript</span></div><div class="line"><span class="string">function fn() &#123;</span></div><div class="line"><span class="string">    console.log(a); // 报错，自己找不到，去定义fn的全局找，所以这里和fn的定义有关，与fn的调用无关。</span></div><div class="line"><span class="string">&#125;</span></div><div class="line"><span class="string">(function() &#123;</span></div><div class="line"><span class="string">    var a = 10;</span></div><div class="line"><span class="string">    fn();</span></div><div class="line"><span class="string">&#125;)();</span></div><div class="line"><span class="string">闭包</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">概念</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">在js中访问了自由变量的函数就是闭包</span></div><div class="line"><span class="string">自由变量</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">函数可访问的外部局部变量，称之为该函数的自由变量</span></div><div class="line"><span class="string">特点</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">闭包的自由变量生命周期会被拉长，与闭包的生命周期进行了捆绑</span></div><div class="line"><span class="string">计数器案例</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">function getCounter() &#123;</span></div><div class="line"><span class="string">    var total = 0;</span></div><div class="line"><span class="string">    return &#123;</span></div><div class="line"><span class="string">        add: function() &#123;</span></div><div class="line"><span class="string">            total++;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        get: function() &#123;</span></div><div class="line"><span class="string">            return total;</span></div><div class="line"><span class="string">        &#125;</span></div><div class="line"><span class="string">    &#125;;</span></div><div class="line"><span class="string">&#125;;</span></div><div class="line"><span class="string">var counter = getCounter();</span></div><div class="line"><span class="string">counter.add();</span></div><div class="line"><span class="string">counter.get();</span></div><div class="line"><span class="string">var counter2 = getCounter();</span></div><div class="line"><span class="string">counter2.add();</span></div><div class="line"><span class="string">counter2.get();</span></div><div class="line"><span class="string">缓存操作</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">var cache = (function() &#123;</span></div><div class="line"><span class="string">    var cache = &#123;&#125;;</span></div><div class="line"><span class="string">    return &#123;</span></div><div class="line"><span class="string">        set: function(key, val) &#123;</span></div><div class="line"><span class="string">            cache[key] = val;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        get: function(key) &#123;</span></div><div class="line"><span class="string">            return cache[key];</span></div><div class="line"><span class="string">        &#125;</span></div><div class="line"><span class="string">    &#125;;</span></div><div class="line"><span class="string">&#125;());</span></div><div class="line"><span class="string">cache.set('张锐', '中国人');</span></div><div class="line"><span class="string">cache.get('张锐');</span></div><div class="line"><span class="string">for循环i面试题</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">var arr = ['第一句话', '第二句话', '第三句话'];</span></div><div class="line"><span class="string">for(var i = 0, len = arr.length; i &lt; len; i++) &#123;</span></div><div class="line"><span class="string">    setTimeout(function(i) &#123;</span></div><div class="line"><span class="string">        return function() &#123;</span></div><div class="line"><span class="string">            console.log(arr[i]);</span></div><div class="line"><span class="string">        &#125;</span></div><div class="line"><span class="string">    &#125;(i), 1000 * i + 1000);</span></div><div class="line"><span class="string">&#125;</span></div><div class="line"><span class="string">预解析</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">可以理解为js解析引擎在逐行执行代码前，对一些特殊代码的预先执行。</span></div><div class="line"><span class="string">预解析过后代码才会从上到下逐行执行，但是预解析时已经定义的变量与函数，是不会重复定义的。</span></div><div class="line"><span class="string">预解析的本质就是变量对象初始化。</span></div><div class="line"><span class="string">预解析做了两件事情</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">1、变量声明提升：检测到变量声明那就率先进行声明</span></div><div class="line"><span class="string">2、函数声明提升：检测到函数声明也率先进行声明</span></div><div class="line"><span class="string">变量声明</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">使用通过var定义的变量，才属于变量声明</span></div><div class="line"><span class="string">例如：var a; 属于变量声明。</span></div><div class="line"><span class="string">例如：b = 10; 不属于变量声明。</span></div><div class="line"><span class="string">var关键字可以通过逗号连续声明多个变量</span></div><div class="line"><span class="string">例如：var a, b, c = 20, d = 30;</span></div><div class="line"><span class="string">a,b,c,d全部属于声明。</span></div><div class="line"><span class="string">var关键字在声明变量的时候，可以给其赋值，如果赋值表达式中含有一些变量，这些变量不属于变量声明。</span></div><div class="line"><span class="string">例如：var a = b = 10;</span></div><div class="line"><span class="string">其中a属于变量声明，b不属于。</span></div><div class="line"><span class="string">函数声明</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">在js中，函数声明式写法比较单一，好区分。</span></div><div class="line"><span class="string">要么定义在全局</span></div><div class="line"><span class="string">要么定义在另一个函数主体内</span></div><div class="line"><span class="string">预解析的特点</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">在变量声明之前访问它不会报错</span></div><div class="line"><span class="string">在函数声明之前调用它不会报错</span></div><div class="line"><span class="string">预解析相关细节</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">js预解析分全局预解析与局部预解析，区别在于局部预解析在函数调用时发生。</span></div><div class="line"><span class="string">变量声明重名 -- 最终只留一个</span></div><div class="line"><span class="string">  console.log(a); // 预解析后值保留一个变量a，值为undefined</span></div><div class="line"><span class="string">  var a = 1;</span></div><div class="line"><span class="string">  var a = 2;</span></div><div class="line"><span class="string">函数声明重名 -- 保留后面的函数</span></div><div class="line"><span class="string">  console.log(test); // 预解析后test为打印2的函数</span></div><div class="line"><span class="string">  function test()&#123; console.log(1) &#125;</span></div><div class="line"><span class="string">  function test()&#123; console.log(2) &#125;</span></div><div class="line"><span class="string">变量与函数重名 -- 保留函数</span></div><div class="line"><span class="string">  console.log(test); // 预解析后test值为函数</span></div><div class="line"><span class="string">  var test = 10;</span></div><div class="line"><span class="string">  function test()&#123;&#125;</span></div><div class="line"><span class="string">  var test = 20;</span></div><div class="line"><span class="string">函数执行时形参会优先执行</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">形参定义与赋值优先于变量与函数声明。</span></div><div class="line"><span class="string">(function(a) &#123;</span></div><div class="line"><span class="string">  console.log(a);  // a函数</span></div><div class="line"><span class="string">  var a = 200;</span></div><div class="line"><span class="string">  function a()&#123;&#125;</span></div><div class="line"><span class="string">  console.log(a);  // 200</span></div><div class="line"><span class="string">&#125;(100));</span></div><div class="line"><span class="string">函数表达式的名称</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">    // 函数fnName的名字在外面无法访问，但是可以在函数内访问，</span></div><div class="line"><span class="string">    // 相当于自己的一个局部变量，值为自己的引用。</span></div><div class="line"><span class="string">    var fn = function fnName()&#123;</span></div><div class="line"><span class="string">        console.log(fnName);  // 里面可以访问</span></div><div class="line"><span class="string">    &#125;;</span></div><div class="line"><span class="string">    console.log(fnName);   // 外面访问报错</span></div><div class="line"><span class="string">函数的四种调用模式</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">this的特点</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">函数中的this，调用方式不同，指向不同</span></div><div class="line"><span class="string">this与调用有关，与定义无关</span></div><div class="line"><span class="string">函数调用模式</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">函数名() || (function()&#123;&#125;()) ==&gt; window</span></div><div class="line"><span class="string">方法调用模式</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">对象.方法名() || 对象方法名 || 祖对象.父对象.子对象.方法名() ==&gt; 宿主对象</span></div><div class="line"><span class="string">构造器调用模式</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">new 构造函数() || new 对象.构造函数() ==&gt; new出来的新实例</span></div><div class="line"><span class="string">间接调用模式(上下文调用模式)</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">call</span></div><div class="line"><span class="string">函数.call(指定的this，实参1，实参2，...)</span></div><div class="line"><span class="string">对象.方法.call(指定的this，实参1，实参2，...)</span></div><div class="line"><span class="string">apply</span></div><div class="line"><span class="string">函数.apply(指定的this，[实参1，实参2，...])</span></div><div class="line"><span class="string">函数.apply(指定的this，&#123;0: 实参1， 1：实参2， length: 2&#125;)</span></div><div class="line"><span class="string">对象.方法.apply(指定的this，[实参1，实参2，...])</span></div><div class="line"><span class="string">异同</span></div><div class="line"><span class="string">call与apply都来自Function.prototype，所以所有的函数都可以使用。</span></div><div class="line"><span class="string">都可以改变函数this的指向</span></div><div class="line"><span class="string">不同之处在于传参的方式上</span></div><div class="line"><span class="string">补充</span></div><div class="line"><span class="string">函数调用call和apply，实际上是间接调用自己</span></div><div class="line"><span class="string">例如fn.call()，表面上看是调用call方法</span></div><div class="line"><span class="string">实际上连fn自己也被调用了，和fn()直接调用的区别是，this变了</span></div><div class="line"><span class="string">call和apply方法借用的原理</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">如果一个方法内部操作的是this，那么我们就可以通过call或apply指定该方法this， this改变成谁，那么该方法最终操作的就是谁。</span></div><div class="line"><span class="string">如果一个方法内部没有操作this，那么是无法借用的。</span></div><div class="line"><span class="string">call和apply常见的使用场景</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">借用数组方法操作伪数组</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">// 给伪数组添加数据</span></div><div class="line"><span class="string">var obj = &#123;&#125;;</span></div><div class="line"><span class="string">Array.protype.push.call(obj, '要添加的第一个值', '要添加的第二个值')</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">// 通过伪数组获取对应的真数据（获取后原伪数组不会被改变，只是得到了新数组）</span></div><div class="line"><span class="string">var argArr = [].slice.call(arguments);</span></div><div class="line"><span class="string">借用Object.prototype.toString获取对象类型</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">var arr = [];</span></div><div class="line"><span class="string">Object.prototype.toString.call(new Date).slice(8, -1)</span></div><div class="line"><span class="string">借用父类构造函数给子类实例添加属性</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">function Parent(name, age) &#123;</span></div><div class="line"><span class="string">    this.name = name;</span></div><div class="line"><span class="string">    this.age = age;</span></div><div class="line"><span class="string">&#125;</span></div><div class="line"><span class="string">function Son() &#123;</span></div><div class="line"><span class="string">    Parent.apply(this, arguments);</span></div><div class="line"><span class="string">&#125;</span></div><div class="line"><span class="string">var p = new Son('火星人', 999);</span></div><div class="line"><span class="string">// apply拆分数组或伪数组值依次传递给函数</span></div><div class="line"><span class="string">var arr = [1, 10, 20, 40];</span></div><div class="line"><span class="string">Math.max.apply(null, arr)</span></div><div class="line"><span class="string">ES5数组新增的3个方法</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">forEach</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">作用：帮我们遍历数组，每遍历到一个值，就会调用一次回调，把这个值与它的下标传递过去</span></div><div class="line"><span class="string">语法：数组.forEach(function(v, i)&#123; console.log('使用forEach帮我们遍历好的值与下标') &#125;)</span></div><div class="line"><span class="string">返回值：undefined</span></div><div class="line"><span class="string">map</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">作用：可以用来代替forEach，但是map可以接收回调的返回值，最终通过一组数据映射为回调返回的另外一组数据</span></div><div class="line"><span class="string">语法：var mapArr = 数组.map(function(v, i)&#123; return v * v &#125;)</span></div><div class="line"><span class="string">返回值：回调所有的返回值组成的新数组</span></div><div class="line"><span class="string">filter</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">作用：可以用来代替forEach，但是还可以过滤数组中的值</span></div><div class="line"><span class="string">语法：var filterArr = 数组.filter(function(v, i)&#123; if(v % 2 ==0)&#123; return true; &#125; &#125;)</span></div><div class="line"><span class="string">返回值：所有返回回调返回true的对应值组成的新数组</span></div><div class="line"><span class="string">call&amp;apply的补充</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">如果不传参 ==&gt; this指向window</span></div><div class="line"><span class="string">传null ==&gt; this指向window</span></div><div class="line"><span class="string">传undefined ==&gt; this指向window</span></div><div class="line"><span class="string">传123 ==&gt; this指向123的包装类型对象(Number对象)</span></div><div class="line"><span class="string">传'abc' ==&gt; this指向'abc'的包装类型对象(String对象)</span></div><div class="line"><span class="string">传true ==&gt; this指向true的包装类型对象(Boolean对象)</span></div><div class="line"><span class="string">传对象 ==&gt; this指向传入的对象</span></div><div class="line"><span class="string">严格模式</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">ES5新增的一个特性，使用该特性可以让js以一种新的模式运行js脚本。</span></div><div class="line"><span class="string">该模式下可以强制我们抛弃那些不推荐不友好的写法</span></div><div class="line"><span class="string">该模式下可以让js之前的一些设计不太合理的api表现的合理一些</span></div><div class="line"><span class="string">该模式下可以让js拥有一些新的特性，比如ES6/ES7规范中定义的某些语法，必须在严格模式下才有效</span></div><div class="line"><span class="string">严格模式的分类</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">全局模式</span></div><div class="line"><span class="string">在全局代码的最上面书写一句话'use strict';</span></div><div class="line"><span class="string">使用该模式，所有的代码都按照严格模式执行</span></div><div class="line"><span class="string">局部模式</span></div><div class="line"><span class="string">在函数内部的最上面书写一句话'use strict';</span></div><div class="line"><span class="string">使用该模式，只有该函数内的代码才会按照严格模式执行</span></div><div class="line"><span class="string">需要记住的几条严格模式规则</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">定义变量必须使用var</span></div><div class="line"><span class="string">函数调用模式this为undefined</span></div><div class="line"><span class="string">真正实现了call谁this就为谁</span></div><div class="line"><span class="string">其他</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">不能使用with语句</span></div><div class="line"><span class="string">废除函数.caller与arguments.callee</span></div><div class="line"><span class="string">eval拥有了单独的作用域</span></div><div class="line"><span class="string">......</span></div></pre></td></tr></table></figure></p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2016/02/05/面向对象高级笔记/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2016/02/05/面向对象高级笔记/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2017总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

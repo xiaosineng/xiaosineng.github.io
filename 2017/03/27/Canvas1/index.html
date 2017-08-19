@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	 <link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			
+    <title>
+    个人技术博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">过客丶肖</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/技术/">技术</a></li><li><a class="category-link" href="/categories/爱好/">爱好</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2017/04/">April 2017</a></li><li><a class="archive-link" href="/archives/2017/03/">March 2017</a></li><li><a class="archive-link" href="/archives/2016/02/">February 2016</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/xiaosineng?tab=repositories" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://imgsrc.baidu.com/image/c0%3Dshijue1%2C0%2C0%2C294%2C40/sign=41bbfd0dba7eca80060831a4f94afda8/64380cd7912397dd52eec32a5382b2b7d0a2870d.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >canvas</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h1><h2 id="绘制图片"><a href="#绘制图片" class="headerlink" title="绘制图片"></a>绘制图片</h2><h3 id="创建图片对象"><a href="#创建图片对象" class="headerlink" title="创建图片对象"></a>创建图片对象</h3><ul>
+<li>document.createElement(“img”)</li>
+<li>new Image();</li>
+</ul>
+<h3 id="绘制图片的时候，必须要在图片加载完毕才能绘制，也就是给图片绑定onload事件"><a href="#绘制图片的时候，必须要在图片加载完毕才能绘制，也就是给图片绑定onload事件" class="headerlink" title="绘制图片的时候，必须要在图片加载完毕才能绘制，也就是给图片绑定onload事件"></a>绘制图片的时候，必须要在图片加载完毕才能绘制，也就是给图片绑定onload事件</h3><h3 id="ctx-drawImage"><a href="#ctx-drawImage" class="headerlink" title="ctx.drawImage();"></a>ctx.drawImage();</h3><ul>
+<li>3参数<ul>
+<li>参数1：图片对象(dom元素)</li>
+<li>参数2/3：图片左上角位于画布中的坐标</li>
+</ul>
+</li>
+<li>5参数(将图片以指定大小放在画布中)<ul>
+<li>参数1：图片对象</li>
+<li>参数2、3：图片左上角位于画布中的坐标</li>
+<li>参数4、5：图片在画布中呈现的宽高</li>
+</ul>
+</li>
+<li>9参数(选取图片中的指定位置，将它绘制在画布中)<ul>
+<li>参数1：图片对象</li>
+<li>参数2/3：图片中指定的矩形区域的左上角顶点坐标</li>
+<li>参数4/5：图片中指定的矩形区域的宽高</li>
+<li>参数6/7：图片的矩形区域左上角位于画布中的坐标</li>
+<li>参数8/9：图片的矩形区域在画布中呈现的宽高</li>
+</ul>
+</li>
+</ul>
+<h2 id="状态的保存与恢复"><a href="#状态的保存与恢复" class="headerlink" title="状态的保存与恢复"></a>状态的保存与恢复</h2><h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><ul>
+<li>ctx.save();       保存状态</li>
+<li>ctx.restore();    恢复状态</li>
+</ul>
+<h3 id="有一次保存就有1次恢复，"><a href="#有一次保存就有1次恢复，" class="headerlink" title="有一次保存就有1次恢复，"></a>有一次保存就有1次恢复，</h3><h3 id="状态栈"><a href="#状态栈" class="headerlink" title="状态栈"></a>状态栈</h3><ul>
+<li>先保存的状态后取出，后保存的状态先取出</li>
+</ul>
+<h4 id="有2次保存就有2次恢复"><a href="#有2次保存就有2次恢复" class="headerlink" title="有2次保存就有2次恢复"></a>有2次保存就有2次恢复</h4><ul>
+<li>ctx.save();       //保存了第一个状态</li>
+<li>一段代码</li>
+<li>ctx.save();       //保存了第二个状态</li>
+<li>ctx.restore();//恢复到第二次保存的状态</li>
+<li>ctx.restrore();//恢复到第一次保存的状态</li>
+</ul>
+<h3 id="推荐的做法："><a href="#推荐的做法：" class="headerlink" title="推荐的做法："></a>推荐的做法：</h3><ul>
+<li>以后要绘制不同状态的图形，可以先把之前的状态保存起来，然后修改新图形需要的一些状态值，绘制新图形，在图形绘制完成，通过restore把状态恢复到最初</li>
+</ul>
+<h2 id="平移变换：改变了canvas中的0-0的位置"><a href="#平移变换：改变了canvas中的0-0的位置" class="headerlink" title="平移变换：改变了canvas中的0,0的位置"></a>平移变换：改变了canvas中的0,0的位置</h2><h3 id="API：ctx-translate-x-y"><a href="#API：ctx-translate-x-y" class="headerlink" title="API：ctx.translate(x,y)"></a>API：ctx.translate(x,y)</h3><ul>
+<li>x,y表示canvas的坐标原点沿着x轴和y轴移动的距离</li>
+<li>x为正数：沿着x轴向右移动；x为负数：沿着x轴向左移动</li>
+<li>y为正数：沿着y轴向下移动；y为负数：沿着y轴向上移动</li>
+</ul>
+<h2 id="旋转变换：旋转的是坐标轴"><a href="#旋转变换：旋转的是坐标轴" class="headerlink" title="旋转变换：旋转的是坐标轴"></a>旋转变换：旋转的是坐标轴</h2><h3 id="API：ctx-rotate-radian"><a href="#API：ctx-rotate-radian" class="headerlink" title="API：ctx.rotate(radian)"></a>API：ctx.rotate(radian)</h3><ul>
+<li>表示坐标轴顺时针/逆时针旋转指定的弧度</li>
+<li>其中正数为顺时针；负数为逆时针</li>
+</ul>
+<h2 id="伸缩变换：改变的是坐标轴上的坐标值"><a href="#伸缩变换：改变的是坐标轴上的坐标值" class="headerlink" title="伸缩变换：改变的是坐标轴上的坐标值"></a>伸缩变换：改变的是坐标轴上的坐标值</h2><h3 id="API：ctx-scale-1-0-5"><a href="#API：ctx-scale-1-0-5" class="headerlink" title="API：ctx.scale(1, 0.5);"></a>API：ctx.scale(1, 0.5);</h3><ul>
+<li>第一个参数：x轴压缩的倍数</li>
+<li>第二个参数：y轴压缩的倍数</li>
+</ul>
+<ul>
+<li>安装编译markdown文件的工具：npm install i5ting_toc -g<ul>
+<li>安装完毕后，在该文件目录中，右击+shift  打开命令行工具，输入命令：i5ting_toc -f 文件名 即可完成编译功能</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2017/03/27/Canvas1/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2017/03/27/Canvas1/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2017总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

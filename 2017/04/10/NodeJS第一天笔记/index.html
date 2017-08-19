@@ -1,0 +1,448 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	 <link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			
+    <title>
+    个人技术博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">过客丶肖</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/技术/">技术</a></li><li><a class="category-link" href="/categories/爱好/">爱好</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2017/04/">April 2017</a></li><li><a class="archive-link" href="/archives/2017/03/">March 2017</a></li><li><a class="archive-link" href="/archives/2016/02/">February 2016</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/xiaosineng?tab=repositories" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://img.hb.aicdn.com/ec320c0a93dff671ccd746ed95b56bf130c8fa8621c5c-MjFweC_fw658);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >nodejs学习笔记（一）</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="NodeJS自学学习目标"><a href="#NodeJS自学学习目标" class="headerlink" title="NodeJS自学学习目标"></a>NodeJS自学学习目标</h1><pre><code>第一天:Node开发环境的搭建、模块化开发、核心模块、es6
+
+第二天:GET/POST、文件操作、编码
+
+第三天:服务端渲染
+
+第四天:express(框架)
+
+第五天:项目
+
+第六天:项目
+</code></pre><hr>
+<h1 id="Node的基本概念"><a href="#Node的基本概念" class="headerlink" title="Node的基本概念"></a>Node的基本概念</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><pre><code>官网:https://nodejs.org/en/
+中文:http://nodejs.cn/
+
+Node能做服务器端开发，给浏览器提供数据，服务端的渲染，数据统计
+</code></pre><h2 id="如何学习"><a href="#如何学习" class="headerlink" title="如何学习"></a>如何学习</h2><pre><code>1、看官方文档，看看中文的资料
+
+2、中文社区 http://cnodejs.org/
+
+3、百度，Google
+
+4、www.stackoverflow.com 神奇的网站
+</code></pre><hr>
+<h1 id="搭建Node开发环境"><a href="#搭建Node开发环境" class="headerlink" title="搭建Node开发环境"></a>搭建Node开发环境</h1><h2 id="Node-exe-Node-msi-软件的安装"><a href="#Node-exe-Node-msi-软件的安装" class="headerlink" title="Node.exe/Node.msi 软件的安装"></a>Node.exe/Node.msi 软件的安装</h2><pre><code>1、直接双击安装某个版本
+    不要安装中文目录下
+
+2、nvm node version manager
+    它可以让我们的电脑安装多个node版本，但是用的时候，只能用一个
+
+    参考:
+        http://www.jianshu.com/p/07c3456e875a
+
+    nvm指令:
+        nvm list 查看当前安装了哪些node版本
+        nvm install 版本号 安装哪个版本
+        nvm uninstall 版本号 卸载哪个版本
+        nvm use 版本号，切换到哪个版本
+
+如何验证有没有安装成功
+    node -v 能出现版本号就代表成功了
+</code></pre><h2 id="设置系统环境变量"><a href="#设置系统环境变量" class="headerlink" title="设置系统环境变量"></a>设置系统环境变量</h2><pre><code>1、在终端的任何目录下，我都想启动QQ?配置环境变量
+
+    步骤:
+        1、拷贝我们可执行文件所在的目录 QQ.exe
+
+        2、打开系统属性 &gt; 高级系统设置 &gt; 高级 &gt; 环境变量 &gt; 系统变量(一般配置这个即可)
+            Path : C:\Program Files (x86)\Tencent\QQ\Bin
+
+        3、重启cmd(必须)
+
+        4、运行QQ.exe
+
+2、系统环境变量的执行流程
+    比如，在个人目录下，输入QQ
+    1、会在当前个人目录下去找，有没有QQ.exe，如果
+    有，直接打开，如果没有继续去系统环境变量里面找
+
+    2、去系统环境变量中，一个一个去系统环境变量里
+    面配置的路径，一个一个去找，如果找到就打开，如
+    果没找到，就报&quot;QQ不是内部或是外部指令&quot;
+
+系统环境变量类似于&quot;桌面快捷方式&quot;
+</code></pre><h2 id="REPL环境"><a href="#REPL环境" class="headerlink" title="REPL环境"></a>REPL环境</h2><pre><code>REPL 交互式解释器
+    交互式解释器（REPL）既可以作为一个独立的程序
+    运行，也可以很容易地包含在其他程序中作为整体程
+    序的一部分使用。REPL为运行JavaScript脚本与查
+    看运行结果提供了一种交互方式，通常REPL交互方
+    式可以用于调试、测试以及试验某种想法。
+
+启动了一个应用程序之后，操作系统会给我们这个应用程序，分配以内存
+
+开启:
+    输入 node 启动了我们node.exe，开启了REPL环境
+
+关闭:
+    1、连按连个 Ctrl+C
+    2、在终端中输入.exit
+</code></pre><h2 id="代码测试"><a href="#代码测试" class="headerlink" title="代码测试"></a>代码测试</h2><pre><code>1、把我们自己写的业务逻辑，放入一个单的js中
+
+2、切换到我们项目所在的目录
+
+3、直接使用 node 你要执行的js文件，就能看到运行效果了
+
+注意点:
+    当我们在终端里面输入 node 01.test.js，它其实内部做的事情是这样的
+    1、开启REPL（启动node.exe）
+    2、读取01.test.js中的内容，扔在REPL去解释执行，把结果输出到屏幕上
+    3、自动退出REPL环境，释放资源
+</code></pre><hr>
+<h1 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a>CommonJS</h1><h2 id="前端中有哪些模块化开发的规范以及实现方案"><a href="#前端中有哪些模块化开发的规范以及实现方案" class="headerlink" title="前端中有哪些模块化开发的规范以及实现方案"></a>前端中有哪些模块化开发的规范以及实现方案</h2><pre><code>浏览器端&amp;服务端：
+    CommonJS 同步 Node
+
+浏览器:
+    CMD Common Module Definition seajs
+    同步
+
+    AMD Asynchronous Module Definition requirejs
+    异步
+</code></pre><h2 id="模块化的开发的好处"><a href="#模块化的开发的好处" class="headerlink" title="模块化的开发的好处"></a>模块化的开发的好处</h2><pre><code>1、容易维护
+
+2、复用率高
+
+3、避免全局变量名污染
+</code></pre><h2 id="CommonJS-1"><a href="#CommonJS-1" class="headerlink" title="CommonJS"></a>CommonJS</h2><pre><code>比较早期一个模块化开发规范，既可以用于服务端，也可以用于浏览器
+</code></pre><h2 id="Node中有哪些模块，学习哪些模块"><a href="#Node中有哪些模块，学习哪些模块" class="headerlink" title="Node中有哪些模块，学习哪些模块"></a>Node中有哪些模块，学习哪些模块</h2><pre><code>参考:https://nodejs.org/dist/latest-v6.x/docs/api/
+
+核心模块:一般是指NodeJS提供的模块
+
+    HTTP     和网络相关
+    URL      和URL相关
+    Path     和路径相关
+    QueryString 请求的参数相关
+    File System 文件操作
+</code></pre><hr>
+<h1 id="NodeJS对核心模块-http-url"><a href="#NodeJS对核心模块-http-url" class="headerlink" title="NodeJS对核心模块(http,url)"></a>NodeJS对核心模块(http,url)</h1><h2 id="HTTP模块"><a href="#HTTP模块" class="headerlink" title="HTTP模块"></a>HTTP模块</h2><pre><code>站在服务端的角度，HTTP模块，主要是用来开启Web服务，供浏览器访问
+
+服务端，返回的数据形式有很多，可能是一个普通的字符
+</code></pre><h3 id="代码的步骤说明"><a href="#代码的步骤说明" class="headerlink" title="代码的步骤说明"></a>代码的步骤说明</h3><pre><code>1、导入http模块
+    需要使用到一个关键字，require(&apos;http&apos;)
+    var http = require(&apos;http&apos;)
+
+2、使用导入进来的http模块(对象)，创建一个服务
+    var server = http.createServer()
+
+3、监听浏览器请求，处理、响应
+    server.on(&apos;request&apos;,function(request,response){
+        response.end(&quot;Hello Girl!!!&quot;)
+    })
+
+4、启动
+    server.listen(8899,&quot;192.168.72.103&quot;,function(err){
+        if(err){
+            console.log(err)
+        }
+
+        console.log(&quot;start success!&quot;)
+    })
+
+注意点:
+    如果我们更改了源代码，必须重新退出REPL，然后重新运行我们的代码，这样才能起作用
+
+常见的问题:
+    1、少写了端口号，或端口好的`:`写成了中文
+</code></pre><h2 id="URL模块"><a href="#URL模块" class="headerlink" title="URL模块"></a>URL模块</h2><pre><code>浏览器发送一个GET请求
+    http://192.168.72.103:8899/login?username=zhangsan&amp;pwd=123
+
+后台要知道，浏览器传递过来的Path和参数
+
+url模块，可以对&apos;/login?username=zhangsan&amp;pwd=123&apos;，调用url模块里面的方法，就可以将这一长串字符串，把它转成js对象
+
+代码步骤:
+    1、var url = require(&apos;url&apos;)
+
+    2、url.parse(URL字符串)
+
+作用:
+    将url字符串，转成js对象，然后，通过设置第二个参数为true，可以将键值对的参数，转成js对象，方便后续操作
+</code></pre><hr>
+<h1 id="nodemon"><a href="#nodemon" class="headerlink" title="nodemon"></a>nodemon</h1><pre><code>作用:
+    它的作用就是用来监控我们源代码，发现源代码更
+    改，保存之后，它就会先退出REPL环境，然后重新
+    开启REPL，将最新的代码扔在REPL中去运行
+
+nodemon是一个npm的全局包，安装方式如下
+    npm i nodemon -g
+
+使用
+    nodemon 要执行文件名
+
+注意点:
+    如果用nodemon去监控源代码，发现源代码更改之后，它没有自动重启，尝试在终端里面按`一个`
+    Ctrl+C
+</code></pre><h2 id="全局包-amp-本地包"><a href="#全局包-amp-本地包" class="headerlink" title="全局包&amp;本地包"></a>全局包&amp;本地包</h2><pre><code>共同点:
+    从https://www.npmjs.com/下载
+
+作用在哪里不一样
+    全局包用在终端里面使用
+    本地包用在项目里面，是为项目服务的
+
+安装的方式不一样
+    全局包 npm install/i 包的名称 -g
+    本地包 npm install/i 包的名称 
+</code></pre><hr>
+<h1 id="es6"><a href="#es6" class="headerlink" title="es6"></a>es6</h1><pre><code>ecmascript 6
+es2015
+
+参考:
+    http://es6.ruanyifeng.com/
+
+注意点:
+    如果你的代码用es6写，在最前面加上
+        &apos;use strict&apos;
+</code></pre><h2 id="let-amp-const"><a href="#let-amp-const" class="headerlink" title="let&amp;const"></a>let&amp;const</h2><pre><code>定义变量/对象
+
+let 就相当于var
+const 定义常量，定义的东西不能改
+
+实际开发中:
+    1、一般情况下，当我们定义好了之后的值，不需要更改的时候，推荐使用const，常量效率高
+
+    2、如果你定义的值，如果以后要改，就必须使用let定义
+
+let 和 var不一样的地方
+    var 允许变量提升
+    let 不允许这样做
+</code></pre><h2 id="字符串操作的方法"><a href="#字符串操作的方法" class="headerlink" title="字符串操作的方法"></a>字符串操作的方法</h2><pre><code>简化我们es6中字符串的操作
+
+includes ---&gt; 返回就是bool
+startsWith ---&gt; 判断字符串是否以什么开头
+    判断协议头
+
+endsWith ---&gt; 判断是否以什么结尾
+    判断文件的后缀
+
+模版字符串
+    1、格式化字符串
+    2、动态替换
+</code></pre><hr>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2017/04/10/NodeJS第一天笔记/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2017/04/10/NodeJS第一天笔记/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2017总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

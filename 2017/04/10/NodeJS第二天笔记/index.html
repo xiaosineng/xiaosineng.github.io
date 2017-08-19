@@ -1,0 +1,447 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	 <link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			
+    <title>
+    个人技术博客
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">过客丶肖</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/技术/">技术</a></li><li><a class="category-link" href="/categories/爱好/">爱好</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2017/04/">April 2017</a></li><li><a class="archive-link" href="/archives/2017/03/">March 2017</a></li><li><a class="archive-link" href="/archives/2016/02/">February 2016</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/xiaosineng?tab=repositories" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://img.hb.aicdn.com/ec320c0a93dff671ccd746ed95b56bf130c8fa8621c5c-MjFweC_fw658);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >nodejs学习笔记（二）</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="REPL"><a href="#REPL" class="headerlink" title="REPL"></a>REPL</h2><pre><code>开启的node.exe，操作系统给它分配一块独立的内存空间，我们称之为REPL环境
+</code></pre><h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><pre><code>作用:
+    开启web服务，供浏览器访问
+
+代码步骤:
+    1、导入http模块(包)
+
+    2、创建server
+
+    3、请求、处理、响应
+
+    4、启动
+</code></pre><h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><pre><code>作用:
+    将我们的url字符串 http://127.0.0.1:8899/login?username=zhangsan&amp;pwd=123
+
+    转成js对象
+
+    注意点:
+        url.parse(url字符串)，如果不接第二个参
+        数，我们获取的query还是一个字符串，如果借
+        了第二个参数，并且还是true，我们获取的
+        query就是一个对象
+
+代码如何写?
+    url.parse(url字符串,[true])
+</code></pre><h2 id="es6"><a href="#es6" class="headerlink" title="es6"></a>es6</h2><pre><code>let&amp;const
+    先用const，如果要更改改成let
+
+字符串一些拓展方法
+    includes
+    startsWith
+    endsWith
+    repeat(2)
+
+    模版字符串 : ``
+        1、格式化字符串
+        2、动态替换
+
+箭头函数
+    const add = (x,y) =&gt; {
+        return x + y
+    }
+
+    const 函数名称 = (形参列表) =&gt; {
+        方法体
+    }
+
+    拓展1：
+        前提：方法体只有一句，可以同时省略{}和return(要么一起省略掉，要么不能省掉)
+
+    拓展2：
+        参数只有一个，参数的括号`()`可以省略
+        注意，没有参数不能省略
+</code></pre><hr>
+<h1 id="今日内容"><a href="#今日内容" class="headerlink" title="今日内容"></a>今日内容</h1><h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><h3 id="HTTP协议的请求和响应"><a href="#HTTP协议的请求和响应" class="headerlink" title="HTTP协议的请求和响应"></a>HTTP协议的请求和响应</h3><pre><code>请求
+    请求行:调试
+    请求头:告诉服务器一些浏览器的信息(User-Agent)
+    请求体:POST里面有，传参
+
+响应
+    状态行:调试
+    响应头:告诉浏览器服务器的一些额外信息
+    响应体:服务器返回的数据
+</code></pre><h3 id="服务端使用querystring来处理浏览器端口发送过来的GET-amp-POST请求的参数"><a href="#服务端使用querystring来处理浏览器端口发送过来的GET-amp-POST请求的参数" class="headerlink" title="服务端使用querystring来处理浏览器端口发送过来的GET&amp;POST请求的参数"></a>服务端使用querystring来处理浏览器端口发送过来的GET&amp;POST请求的参数</h3><pre><code>GET http://127.0.0.1:8899/login?username=zhangsan&amp;pwd=123
+
+POST http://127.0.0.1:8899/login
+
+querystring
+    作用:把GET/POST传递过来的键值对的字符串转成js对象
+
+    username=zhangsan&amp;pwd=123 ==&gt; 
+    {
+        username:zhangsan,
+        pwd:123
+    }
+
+代码步骤:
+    1、开启web服务
+
+    2、接收GET/POST传递过来的参数(键值对的字符串)
+
+    3、使用querystring将键值对的字符串转成js对象
+
+注意点:
+    node后台接收post发送过来的请求，是和GET不一样的，通过事件的方式来接收
+
+    1、给req注册两个事件 data ，用来接收，浏览器每一次传递过来的数据（这个data事件，究竟执行多少次取决于浏览器发送的数据大小）
+
+    2、req的end事件，是在所有的数据都已经发送到服务器就调用，这个地方才能处理使用querystring将得到的键值对的字符串转成js对象
+</code></pre><h3 id="GET-amp-POST的比较"><a href="#GET-amp-POST的比较" class="headerlink" title="GET&amp;POST的比较"></a>GET&amp;POST的比较</h3><pre><code>共同点:
+    都可以发送请求，都可以传参
+
+不同点
+    传参的方式不一样
+
+    限制不一样 GET 256KB POST 2M
+
+    GET有缓存，POST没有
+
+工作中如何选择?
+    如果是需要向服务器获取数据，这个使用用GET，GET有缓存效率高
+
+    如果是需要向服务器提交数据（注册），这个时候用POST，相对来说安全一些
+</code></pre><hr>
+<h2 id="fs模块"><a href="#fs模块" class="headerlink" title="fs模块"></a>fs模块</h2><pre><code>作用:
+    是用来在服务端操作文件（读文件&amp;写文件）
+</code></pre><h3 id="fs读取文件"><a href="#fs读取文件" class="headerlink" title="fs读取文件"></a>fs读取文件</h3><pre><code>文件读取操作：
+    1、浏览器发送一个请求
+        http://127.0.0.1:8899/index.html
+
+    2、当node.exe明白我们的意图之后，去服务器硬盘里面读取index.html
+        使用到fs模块        
+
+    3、直接将其返回给浏览器去呈现
+
+注意点:
+    当我们使用fs去读取文件的时候，这个时候，我们需要事先知道文件的路径，关于路径，在node专门提供了一个模块(path)
+
+既然同步也可以读取文件，异步也可以读取文件，究竟选择哪种方式呢?
+    如果文件非常小，可以用同步也可以用异步
+    如果文件过大，只能用异步
+
+    在实际开发过程中，读写文件操作，是一个比较耗时的操作，用得比较多的还是异步的方式去读取
+</code></pre><h3 id="全局的变量说明"><a href="#全局的变量说明" class="headerlink" title="全局的变量说明"></a>全局的变量说明</h3><pre><code>__dirname 两个下划线，它代表你当前写的那个文件，所在的目录
+</code></pre><h3 id="编码的故事"><a href="#编码的故事" class="headerlink" title="编码的故事"></a>编码的故事</h3><pre><code>乱码出现的原因:
+    写文件时候编码和读取文件的编码不一致造成的
+
+如何解决?
+    1、把写文件时候的编码和读取时候的编码一致就行了
+
+    2、直接使用UTF-8
+
+编码的历史
+    美国 ASCII码 键盘上看到的那些
+    欧洲     ISO-8859-1 
+    韩国 韩国的编码
+    日本 日本的编码
+    中国 简体 GB2312(5千个) 囧 GBK(2万个汉字)
+        繁体 大五码
+
+    UTF-8 200万个
+
+拓展:
+    如果公司的老项目里面的文件，都是用的GBK编码，
+    我现在，后台语言决定用Node去读取，但是，Node
+    本身只支持UTF-8、ASCII，不支持GBK，肿么办
+        找第三方包(iconv-lite)
+
+iconv-lite的使用(解码)
+    var iconv = require(&apos;iconv-lite&apos;)
+
+    const str = iconv.decode(data, &apos;GBK&apos;)
+
+Node中如何使用第三方包(去npmjs.com上面下载)
+    npm install 包名 --save
+
+    参考:https://www.npmjs.com/package/iconv-lite
+</code></pre><h3 id="文件夹-amp-文件的写入操作"><a href="#文件夹-amp-文件的写入操作" class="headerlink" title="文件夹&amp;文件的写入操作"></a>文件夹&amp;文件的写入操作</h3><pre><code>文件夹的操作
+    1、新建 mkdir
+    2、删除 rmdir
+    3、判断是否存在 exists
+    4、重命名 rename
+
+文件的操作
+    1、读取(已经完成)
+    2、写入 writeFile/appendFile
+    3、判断文件是否存在 exists
+    4、重命名文件 rename
+    5、删除 unlink
+    6、监控文件 watch
+
+注意点:
+    1、fs.exists 即可判断文件夹也可以判断文件
+    2、fs.rename 既可以用来重命名文件夹也可以用来重命名文件
+    3、文件可以在不创建的情况下，就往里面写内容，
+    Node会自动判断该文件是否存在，如果不存在就帮
+    我们创建，如果存在了就往里面写入内容
+</code></pre><h3 id="同步-amp-异步"><a href="#同步-amp-异步" class="headerlink" title="同步&amp;异步"></a>同步&amp;异步</h3><pre><code>相同点
+    1、同步和异步方法都可以拿到结果
+    2、同步和异步方法都可以去完成某件事
+
+不同点
+    1、执行时机不一样，同步是从上而下依次执行，异步会加入到事件队列中，继续执行下面的代码
+
+    2、获取结果的方式不一样，同步是根据返回值获取结果，异步是通过回调函数
+
+实际开发中，如何选择
+    1、除了耗时操作用异步，其它都用同步
+</code></pre><hr>
+<h2 id="自定义模块"><a href="#自定义模块" class="headerlink" title="自定义模块"></a>自定义模块</h2><h3 id="Node中三种模块"><a href="#Node中三种模块" class="headerlink" title="Node中三种模块"></a>Node中三种模块</h3><pre><code>第一种:核心模块
+第二种:第三方模块(npmjs.com)
+第三种:自定义模块
+</code></pre><h3 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a>CommonJS</h3><pre><code>定义
+    在某个js文件中写你自己的业务逻辑代码，如果我们
+    自定义模块写的内容，要想被其它文件或是模块，使
+    用的话，必须在我当前模块中，暴露出去其它文件所
+    需要的成员
+
+    暴露成员
+        module.exports = {
+            属性名称:值
+        }
+
+如何使用自定义模块(导入进来使用)
+
+
+注意点:
+    1、在导入自定义模块的时候，必须写全我们要导入的自定义模块的路径
+    2、你暴露出去的是一个什么东西，那么别人导入的也是一个什么东西
+    3、如果我们只需要导出唯一一个成员，module.exports = 导出的唯一成员
+    4、如果我们只需要导出多个，我们需要导出成一个对象 module.exports = {
+            属性1:值1,
+            属性2:值2
+        }
+</code></pre><h2 id="自定义模块的思路"><a href="#自定义模块的思路" class="headerlink" title="自定义模块的思路"></a>自定义模块的思路</h2><pre><code>1、先写自己的业务逻辑代码，然后使用module.exports = {} ， 将外界需要的东西暴露出去
+
+2、当我们需要使用一个定义模块模块的时候，通过require导入(一定要把自定义模块的路径写全)
+</code></pre><hr>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2017/04/10/NodeJS第二天笔记/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2017/04/10/NodeJS第二天笔记/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2017总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
